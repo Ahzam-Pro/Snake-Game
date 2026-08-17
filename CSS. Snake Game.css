@@ -28,6 +28,12 @@ h1 {
     top: 80px;
 }
 
+#HighestScore{
+    color: #00ff00;
+    top: 100%;    
+}
+
+
 .binary {
     position: absolute;
     width: 100%;
