@@ -3,6 +3,7 @@ const canvas = document.getElementById("game");
 const brush = canvas.getContext("2d");
 
 const scoreText = document.getElementById("Score_2");
+const highestScoreText = document.getElementById("highestScore");
 const size = 20;
 
 let snake = [{ x: 460, y: 240 }];
@@ -19,6 +20,7 @@ let food = {
 };
 
 let score = 0;
+let highestScore = 0;
 
 // -------------- For Food Move and Colour -------------- //
 function draw() {
@@ -86,9 +88,15 @@ function drawFood(newHead) {
   let validFood = false;
 
   if (newHead.x === food.x && newHead.y === food.y) {
-    score = score + 5;
+    score += 5;
 
-    scoreText.textContent = "Score: " + score;
+	scoreText.textContent = "Score: " + score;
+
+    if (score > highestScore) {
+      highestScore = score;
+    }
+
+    highestScoreText.textContent = highestScore;
 
     while (!validFood) {
       food.x = Math.floor(Math.random() * (canvas.width / size)) * size;
