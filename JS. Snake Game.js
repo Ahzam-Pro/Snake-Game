@@ -90,7 +90,7 @@ function drawFood(newHead) {
   if (newHead.x === food.x && newHead.y === food.y) {
     score += 5;
 
-	scoreText.textContent = "Score: " + score;
+    scoreText.textContent = "Score: " + score;
 
     if (score > highestScore) {
       highestScore = score;
