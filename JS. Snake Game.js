@@ -43,7 +43,6 @@ function draw() {
     x: snake[0].x + dx,
     y: snake[0].y + dy,
   };
-
   // -------------- This for wrap-around effect -------------- //
   if (newHead.x + size > canvas.width) newHead.x = 0;
   if (newHead.x < 0) newHead.x = canvas.width - size;
@@ -96,7 +95,7 @@ function drawFood(newHead) {
       highestScore = score;
     }
 
-    highestScoreText.textContent = highestScore;
+    highestScoreText.textContent = "Highest Score: " + highestScore;
 
     while (!validFood) {
       food.x = Math.floor(Math.random() * (canvas.width / size)) * size;
