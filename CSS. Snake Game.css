@@ -1,12 +1,12 @@
 body {
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; /*Control if the size of the obgject is bigger than box */
     background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
+    display: flex;  /*It's make the item flex*/
+    align-items: center;  /*Center Algin the item horizontally*/
+    justify-content: center;  /*Center Algin the item Vertically*/
+    height: 100vh;  
+    /* position: relative; /*Yet it's not needed */ /*It's allowed to slide the item in body*/
     font-family: Arial, Helvetica, sans-serif;
 }
 
